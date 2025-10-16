@@ -92,7 +92,7 @@ export const ExpandedOverlay = styled(motion.div)`
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.secondary};
   z-index: 999;
-  display: flex;  
+  display: flex;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
@@ -101,8 +101,8 @@ export const ExpandedOverlay = styled(motion.div)`
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 5px;
+  right: 20px;
   background: transparent;
   border: none;
   color: ${({ theme }) => theme.colors.tertiary};

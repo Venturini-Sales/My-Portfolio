@@ -21,14 +21,14 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
   font-size: 4.5rem;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   text-align: center;
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 30px;
   text-align: center;
 `;
 
@@ -46,8 +46,13 @@ export const ButtonsArea = styled.div`
   align-items: center;
 `;
 
-export const Button = styled.div`
-  padding: 15px 13px;
+export const Button = styled.a`
+  padding: 2% 1.5%;
   border-radius: 100%;
-  border: 1px solid ${({ theme }) => theme.colors.tertiary};
+  transition: 0.3s ease;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.tertiary};
+  &:hover {
+    transform: scale(1.5);
+  }
 `;

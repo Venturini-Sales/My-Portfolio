@@ -109,7 +109,7 @@ export const BentoGrid = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "tween", duration: 0.2, ease: "easeInOut" }}
         >
-          <BentoTitle>Bem Vindo</BentoTitle>
+          <BentoTitle>Bem-Vindo</BentoTitle>
         </BentoCard>
 
         <BentoCard
@@ -257,6 +257,8 @@ export const BentoGrid = () => {
             {activeCard === "skills" && <SkillsSection />}
 
             <CloseButton
+              onMouseOver={ToggleCursorHover}
+              onMouseOut={ToggleCursorHover}
               onClick={() => {
                 setActiveCard(null);
               }}
