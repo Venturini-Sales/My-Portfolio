@@ -26,6 +26,7 @@ import {
   FileButton,
   ExpandedOverlay,
   CloseButton,
+  BentoCardCv,
 } from "./styles";
 import { CursorContext } from "../../Contexts/ContextCursor";
 import { WelcomeSection } from "../Sections/WelcomeSection/WelcomeSection";
@@ -33,6 +34,7 @@ import { AboutMeSection } from "../Sections/AboutMeSection/AboutMeSection";
 import { ProjectSection } from "../Sections/ProjectSection/ProjectSection";
 import { ContactSection } from "../Sections/ContactSection/ContactSection";
 import { SkillsSection } from "../Sections/SkillsSection/SkillsSection";
+import Curriculo from "/pdf/curriculo.pdf";
 
 export const BentoGrid = () => {
   const [isProjectHovered, setIsProjectHovered] = useState(false);
@@ -224,7 +226,12 @@ export const BentoGrid = () => {
           </div>
         </BentoCard>
 
-        <BentoCard
+        <BentoCardCv
+          href={Curriculo}
+          download
+          draggable="false"
+          onMouseOver={ToggleCursorHover}
+          onMouseOut={ToggleCursorHover}
           whileHover={{
             scale: 1.05,
             boxShadow: "0 10px 20px rgba(0,0,0,0.2)",
@@ -238,7 +245,7 @@ export const BentoGrid = () => {
             <BentoTitle>Baixar CV</BentoTitle>
             <FontAwesomeIcon icon={faDownload} size="2x" />
           </FileButton>
-        </BentoCard>
+        </BentoCardCv>
       </BentoContainer>
 
       <AnimatePresence>
@@ -257,8 +264,6 @@ export const BentoGrid = () => {
             {activeCard === "skills" && <SkillsSection />}
 
             <CloseButton
-              onMouseOver={ToggleCursorHover}
-              onMouseOut={ToggleCursorHover}
               onClick={() => {
                 setActiveCard(null);
               }}

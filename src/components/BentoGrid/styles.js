@@ -72,6 +72,24 @@ export const BentoCard = styled(motion.div)`
   }
 `;
 
+export const BentoCardCv = styled(motion.a)`
+  border-radius: 10px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+  cursor: none;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: ${({ theme }) => theme.colors.secondary};
+    border: 2px solid ${({ theme }) => theme.colors.tertiary};
+  }
+`;
+
 export const FileButton = styled.div`
   display: flex;
   justify-content: center;
