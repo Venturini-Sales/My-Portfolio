@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
+import { Slider } from "../../Slider/Slider";
+import { SlideArea } from "./styles";
 
 export const ProjectSection = () => {
   return (
-    <div>ProjectSection</div>
-  )
-}
+    <SlideArea>
+      <Slider />
+    </SlideArea>
+  );
+};

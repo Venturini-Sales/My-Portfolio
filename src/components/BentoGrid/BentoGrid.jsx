@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -40,9 +40,8 @@ export const BentoGrid = () => {
   const [isProjectHovered, setIsProjectHovered] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
   const [activeCard, setActiveCard] = useState(null);
-
+  const [index, setIndex] = useState(0);
   const [circleCenter, setCircleCenter] = useState({ x: "50vw", y: "50vh" });
-
   const { ToggleCursorHover } = useContext(CursorContext);
 
   const icons = [
@@ -55,7 +54,14 @@ export const BentoGrid = () => {
     <SiMysql size={80} color="currentColor" />,
   ];
 
-  const [index, setIndex] = useState(0);
+  const CloseSection = useCallback(
+    (event) => {
+      if (event.key === "Escape" && activeCard !== null) {
+        setActiveCard(null);
+      }
+    },
+    [activeCard]
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,6 +69,11 @@ export const BentoGrid = () => {
     }, 2000);
     return () => clearInterval(interval);
   }, [icons.length]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", CloseSection);
+    return () => window.removeEventListener("keydown", CloseSection);
+  }, [CloseSection]);
 
   const expandVariants = (x, y) => ({
     initial: {

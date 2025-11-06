@@ -113,7 +113,7 @@ export const ExpandedOverlay = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: auto;
+  overflow: hidden;
   flex-direction: column;
 `;
 
@@ -125,6 +125,7 @@ export const CloseButton = styled.button`
   border: none;
   color: ${({ theme }) => theme.colors.tertiary};
   font-size: 40px;
+  z-index: 800;
   cursor: none;
   transition: 0.3s ease;
   &:hover {
