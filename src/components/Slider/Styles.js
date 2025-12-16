@@ -7,7 +7,7 @@ export const SliderWrapper = styled.div`
   .swiper-pagination-bullet {
     width: 18px;
     height: 18px;
-    background-color: #ffffff80;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     transition: all 0.6s ease-in-out;
     cursor: none;
@@ -56,12 +56,10 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--width);
-  aspect-ratio: 1/1;
   margin: auto;
 `;
 
 export const ItemImage = styled.img`
   display: block;
-  width: 400px;
+  width: 450px;
 `;
