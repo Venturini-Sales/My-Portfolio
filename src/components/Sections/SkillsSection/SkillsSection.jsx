@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import {
   SiReact,
@@ -30,9 +30,11 @@ import {
 } from "./styles";
 
 import ParallaxText from "../../ParallaxText/ParallaxText";
+import { CursorContext } from "../../../Contexts/ContextCursor";
 
 export const SkillsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const { ToggleCursorHover } = useContext(CursorContext);
 
   const [skillsRef] = useAutoAnimate({
     duration: 250,
@@ -144,30 +146,40 @@ export const SkillsSection = () => {
         <HardSkillsHeader>
           <HardSkillsSelector>
             <li
+              onMouseOver={ToggleCursorHover}
+              onMouseOut={ToggleCursorHover}
               className={selectedCategory === "Todos" ? "active" : ""}
               onClick={() => setSelectedCategory("Todos")}
             >
               Todos
             </li>
             <li
+              onMouseOver={ToggleCursorHover}
+              onMouseOut={ToggleCursorHover}
               className={selectedCategory === "Framework" ? "active" : ""}
               onClick={() => setSelectedCategory("Framework")}
             >
               Frameworks
             </li>
             <li
+              onMouseOver={ToggleCursorHover}
+              onMouseOut={ToggleCursorHover}
               className={selectedCategory === "Linguagem" ? "active" : ""}
               onClick={() => setSelectedCategory("Linguagem")}
             >
               Linguagens
             </li>
             <li
+              onMouseOver={ToggleCursorHover}
+              onMouseOut={ToggleCursorHover}
               className={selectedCategory === "Ferramenta" ? "active" : ""}
               onClick={() => setSelectedCategory("Ferramenta")}
             >
               Ferramentas
             </li>
             <li
+              onMouseOver={ToggleCursorHover}
+              onMouseOut={ToggleCursorHover}
               className={selectedCategory === "Biblioteca" ? "active" : ""}
               onClick={() => setSelectedCategory("Biblioteca")}
             >
@@ -178,7 +190,11 @@ export const SkillsSection = () => {
           <HardSkillsButtonsArea ref={skillsRef}>
             <HardSkillsGrid key={selectedCategory}>
               {visibleSkills.map((skill) => (
-                <HardSkillsButtons key={skill.title}>
+                <HardSkillsButtons
+                  onMouseOver={ToggleCursorHover}
+                  onMouseOut={ToggleCursorHover}
+                  key={skill.title}
+                >
                   {skill.icon}
                   <p>{skill.title}</p>
                 </HardSkillsButtons>
