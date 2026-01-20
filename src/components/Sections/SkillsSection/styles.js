@@ -102,4 +102,6 @@ export const HardSkillsTitle = styled.h1``;
 
 export const HardSkillsText = styled.p`
   text-align: center;
+  font-size: 20px;
+  width: 700px;
 `;

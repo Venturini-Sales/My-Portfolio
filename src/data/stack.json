@@ -1,0 +1,58 @@
+{
+  "html": {
+    "title": "HTML",
+    "description": "HTML foi a primeira tecnologia que aprendi no mundo da programação. Ele é responsável por toda a estrutura de um site (títulos, textos, seções, tabelas e outros elementos fundamentais). Através do HTML, definimos a base e a organização de uma aplicação web, além de garantir acessibilidade por meio do uso correto de tags semânticas."
+  },
+  "css": {
+    "title": "CSS",
+    "description": "CSS é a linguagem que complementa o HTML, encarregando-se da estilização e da aparencia de toda a página. Com ela, é possível ter total controle sobre o layout, estabelecendo cores, formatos, tipografia, animações e responsividade, o que possibilita a criação de interfaces modernas, intuitivas e ajustaveis a diferentes tipos de tela."
+  },
+  "javascript": {
+    "title": "JavaScript",
+    "description": "Javascript é uma das principais linguagens de programação, sendo a mais usada na programação web. Ela é responsável pela interatividade, lógica e comportamento dinâmico das aplicações, além de permitir manipular o DOM, consumir APIs e validar dados, sendo de extrema importância para a criação de qualquer site."
+  },
+  "typescript": {
+    "title": "TypeScript",
+    "description": "Typescript é uma linguagem de programação que permite a tipagem em códigos Javascript, ajudando a evitar erros no ambiente de desenvolvimento. Ele também melhora a leitura de códigos e manutenção de aplicações, sendo usado principalmente em projetos de médio e grande porte."
+  },
+  "sass": {
+    "title": "Sass",
+    "description": "Sass é um pré-processador do CSS que expande as funcionalidades da linguagem, permitindo o uso de variáveis, funções, aninhamento de regras, entre outros. O uso de Sass facilita a organização de codigo e torna a estilização mais reutilizável e fácil de manter."
+  },
+  "react": {
+    "title": "React",
+    "description": ""
+  },
+  "tailwind": {
+    "title": "Tailwind CSS",
+    "description": ""
+  },
+  "styledcomponents": {
+    "title": "Styled Components",
+    "description": ""
+  },
+  "axios": {
+    "title": "Axios",
+    "description": ""
+  },
+  "materialui": {
+    "title": "Material UI",
+    "description": ""
+  },
+  "framermotion": {
+    "title": "Framer Motion",
+    "description": ""
+  },
+  "vscode": {
+    "title": "VS Code",
+    "description": ""
+  },
+  "git": {
+    "title": "Git",
+    "description": ""
+  },
+  "mysql": {
+    "title": "MySQL",
+    "description": ""
+  }
+}
