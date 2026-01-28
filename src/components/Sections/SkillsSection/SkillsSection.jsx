@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   SiReact,
   SiJavascript,
@@ -43,6 +44,26 @@ export const SkillsSection = () => {
     duration: 250,
     easing: "ease-in-out",
   });
+
+  const cardVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.35,
+        ease: "easeOut",
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.25,
+        ease: "easeIn",
+      },
+    },
+  };
 
   const HardSkills = [
     {
@@ -185,13 +206,22 @@ export const SkillsSection = () => {
           </HardSkillsButtonsArea>
         </HardSkillsHeader>
 
-        <HardSkillsDescription>
-          <HardSkillsTitle>
-            {selectedData?.title || selectedData?.classNames}
-          </HardSkillsTitle>
+        <AnimatePresence mode="wait">
+          <HardSkillsDescription
+            as={motion.div}
+            key={selectedSkill}
+            variants={cardVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            <HardSkillsTitle>
+              {selectedData?.title || selectedData?.classNames}
+            </HardSkillsTitle>
 
-          <HardSkillsText>{selectedData?.description}</HardSkillsText>
-        </HardSkillsDescription>
+            <HardSkillsText>{selectedData?.description}</HardSkillsText>
+          </HardSkillsDescription>
+        </AnimatePresence>
       </HardSkillsArea>
 
       <ParallaxText />

@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
-import ProjectImage from "../../assets/Images/mockupaerowave.svg";
+import ExclusiveImage from "../../assets/Images/mockupexclusive.png";
+import TriadeImage from "../../assets/Images/mockuptriade.png";
+import AerowaveImage from "../../assets/Images/mockupaerowave.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import {
@@ -20,22 +22,22 @@ const slidesData = [
   {
     title: "Exclusive",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.",
-    image: ProjectImage,
+      "Exclusive se trata de um e-commerce completo desenvolvido em React com o objetivo de simular uma loja virtual moderna de forma realista. O projeto consome a API do DummyJson, exibindo produtos separados por categorias, além de simular promoções, também contando com um sistema de cadastro e login, armazenando nome de usuário, produtos na lista de desejo, carrinho de compras no LocalStorage e possuindo um sistema de compra integrado com o Paypal, permitindo pagamentos por cartão. A arquitetura do projeto foi bem organizada através da componentização, bibliotecas e padrões de design, utilizando ferramentas como o Styled Components, Custom Hooks e Material UI, sendo um exercício que aprimorou minhas habilidades de organização de código, design e lógica.",
+    image: ExclusiveImage,
     alt: "Imagem da Página",
   },
   {
-    title: "Tríade",
+    title: "Tríade Gestão Contábil",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.",
-    image: ProjectImage,
+      "Este site foi criado como um projeto freelance e concluído em uma semana. Este site foi construído em React, utilizando bibliotecas como FramerMotion, FontAwesome e Styled Components. Este projeto marcou meu primeiro trabalho como freelancer, em que fui responsável por todo o design, exceto pela escolha das paletas de cores. O objetivo principal do site é fornecer uma plataforma visualmente atraente e funcional para a apresentação de informações, com componentes reutilizáveis e animações interativas que melhoram a experiência do usuário. A atenção aos detalhes no design e na implementação técnica resultou em um site que atende às necessidades do cliente e demonstra um alto nível de profissionalismo e competência técnica.",
+    image: TriadeImage,
     alt: "Imagem da Página",
   },
   {
     title: "AeroWave",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.",
-    image: ProjectImage,
+      "O projeto Aerowave foi construído com o intuito de simular um site de venda de discos com a estética dos anos 90, referenciando a interface do Windows 98. Feito em React, possui funcionalidades como rotas dinâmicas, componentização, sistema de login e cadastro, sistema de contato integrado ao EmailJS, além do sistema de exibição de produtos com fotos e nomes dos discos junto das prévias de áudio dos álbuns.",
+    image: AerowaveImage,
     alt: "Imagem da Página",
   },
 ];

@@ -1,7 +1,7 @@
 {
   "html": {
     "title": "HTML",
-    "description": "HTML foi a primeira tecnologia que aprendi no mundo da programação. Ele é responsável por toda a estrutura de um site (títulos, textos, seções, tabelas e outros elementos fundamentais). Através do HTML, definimos a base e a organização de uma aplicação web, além de garantir acessibilidade por meio do uso correto de tags semânticas."
+    "description": "HTML é uma linguagem de marcação, sendo responsável por estruturar o conteúdo da web. Ele que define os elementos da página, como títulos, parágrafos, links, imagens e formulários, garantindo acessibilidade e compatibilidade com diferentes navegadores e dispositivos e trabalhando em conjunto com o CSS para a criação de interfaces."
   },
   "css": {
     "title": "CSS",
@@ -21,38 +21,38 @@
   },
   "react": {
     "title": "React",
-    "description": ""
+    "description": "React se trata de uma biblioteca JavaScript voltada para a criação de interfaces usando componentes reutilizáveis. Criada pelo Facebook, é uma forma eficiente de manter o código organizado e mais fácil de realizar manutenções, tornando o ambiente de desenvolvimento de aplicações muito mais dinâmico e prático."
   },
   "tailwind": {
     "title": "Tailwind CSS",
-    "description": ""
+    "description": "Tailwind CSS é um framework que funciona fornecendo classes prontas para estilização direta pelo HTML do projeto. Ele permite desenvolver interfaces de forma rápida, mantendo a consistência visual e o alto nível de customização do CSS, porém sem a necessidade de escrever muito CSS manual."
   },
   "styledcomponents": {
     "title": "Styled Components",
-    "description": ""
+    "description": "Styled Components é uma biblioteca JavaScript que permite escrever estilos dentro de componentes React, possibilitando uma ampla reutilização de código, além de oferecer recursos como suporte a temas, estilização de componentes de outras bibliotecas e estilizações globais, mantendo a manutenção dos estilos muito mais simples em aplicações complexas."
   },
   "axios": {
     "title": "Axios",
-    "description": ""
+    "description": "Axios é uma biblioteca JavaScript focada na realização de requisições HTTP, simplificando o consumo de APIs, além de oferecer suporte a promises, interceptadores, tratamento de erros e configuração de requisições, sendo uma forma mais prática e facilitada de integrar APIs na aplicação."
   },
   "materialui": {
     "title": "Material UI",
-    "description": ""
+    "description": "Material UI se trata de uma biblioteca de componentes em React baseada no Material Design do Google. Ela oferece componentes prontos acessíveis e customizáveis, sendo uma forma de acelerar o desenvolvimento de interfaces com componentes reutilizáveis de fácil configuração."
   },
   "framermotion": {
     "title": "Framer Motion",
-    "description": ""
+    "description": "Framer Motion é uma biblioteca de animações desenvolvida para o React, oferecendo uma forma mais prática e intuitiva de criar transições e interações fluidas, sendo capaz de animar componentes inteiros sem afetar a performance e melhorando a experiência de usuário."
   },
   "vscode": {
-    "title": "VS Code",
-    "description": ""
+    "title": "Visual Studio Code",
+    "description": "Visual Studio Code é um editor de código rápido e altamente personalizável. Ele oferece suporte a diversas linguagens, possuindo integração com Git e uma vasta biblioteca de extensões que aumentam a produtividade no desenvolvimento, permitindo que o ambiente seja modificado a gosto do desenvolvedor."
   },
   "git": {
     "title": "Git",
-    "description": ""
+    "description": "Git é um sistema de controle de versão que permite o rastreamento de mudanças no código ao longo do tempo, facilitando o trabalho em equipe, o versionamento e o gerenciamento de diferentes fluxos de desenvolvimento, além de ajudar a evitar conflitos de código."
   },
   "mysql": {
     "title": "MySQL",
-    "description": ""
+    "description": "MySQL é um sistema de gerenciamento de banco de dados amplamente utilizado em aplicações web. Esse sistema permite o armazenamento, organização e consulta de dados de forma eficiente, sendo bastante conhecido pela sua confiabilidade e seu desempenho."
   }
 }

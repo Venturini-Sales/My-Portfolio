@@ -89,19 +89,21 @@ export const HardSkillsButtons = styled.div`
 
 export const HardSkillsDescription = styled.div`
   display: flex;
-  padding: 30px;
+  padding: 50px 80px;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  width: 80%;
+  gap: 30px;
+  width: 65%;
   background-color: #353535;
   border-radius: 15px;
 `;
 
-export const HardSkillsTitle = styled.h1``;
+export const HardSkillsTitle = styled.h1`
+  text-transform: uppercase;
+  font-weight: 800;
+`;
 
 export const HardSkillsText = styled.p`
   text-align: center;
   font-size: 20px;
-  width: 700px;
 `;
