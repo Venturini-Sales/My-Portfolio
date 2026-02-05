@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -16,7 +16,11 @@ import {
   SliderContainer,
   SliderWrapper,
   Title,
+  Button,
+  ButtonArea,
+  ItemContainer,
 } from "./Styles";
+import { CursorContext } from "../../Contexts/ContextCursor";
 
 const slidesData = [
   {
@@ -25,6 +29,8 @@ const slidesData = [
       "Exclusive se trata de um e-commerce completo desenvolvido em React com o objetivo de simular uma loja virtual moderna de forma realista. O projeto consome a API do DummyJson, exibindo produtos separados por categorias, além de simular promoções, também contando com um sistema de cadastro e login, armazenando nome de usuário, produtos na lista de desejo, carrinho de compras no LocalStorage e possuindo um sistema de compra integrado com o Paypal, permitindo pagamentos por cartão. A arquitetura do projeto foi bem organizada através da componentização, bibliotecas e padrões de design, utilizando ferramentas como o Styled Components, Custom Hooks e Material UI, sendo um exercício que aprimorou minhas habilidades de organização de código, design e lógica.",
     image: ExclusiveImage,
     alt: "Imagem da Página",
+    deployLink: "https://exclusive-zeta-five.vercel.app/",
+    repositoryLink: "https://github.com/Venturini-Sales/Exclusive",
   },
   {
     title: "Tríade Gestão Contábil",
@@ -32,6 +38,8 @@ const slidesData = [
       "Este site foi criado como um projeto freelance e concluído em uma semana. Este site foi construído em React, utilizando bibliotecas como FramerMotion, FontAwesome e Styled Components. Este projeto marcou meu primeiro trabalho como freelancer, em que fui responsável por todo o design, exceto pela escolha das paletas de cores. O objetivo principal do site é fornecer uma plataforma visualmente atraente e funcional para a apresentação de informações, com componentes reutilizáveis e animações interativas que melhoram a experiência do usuário. A atenção aos detalhes no design e na implementação técnica resultou em um site que atende às necessidades do cliente e demonstra um alto nível de profissionalismo e competência técnica.",
     image: TriadeImage,
     alt: "Imagem da Página",
+    deployLink: "https://triadegestaocontabil.com.br/",
+    repositoryLink: "https://triadegestaocontabil.com.br/",
   },
   {
     title: "AeroWave",
@@ -39,11 +47,14 @@ const slidesData = [
       "O projeto Aerowave foi construído com o intuito de simular um site de venda de discos com a estética dos anos 90, referenciando a interface do Windows 98. Feito em React, possui funcionalidades como rotas dinâmicas, componentização, sistema de login e cadastro, sistema de contato integrado ao EmailJS, além do sistema de exibição de produtos com fotos e nomes dos discos junto das prévias de áudio dos álbuns.",
     image: AerowaveImage,
     alt: "Imagem da Página",
+    deployLink: "https://aerowave-zeta.vercel.app/",
+    repositoryLink: "https://github.com/Venturini-Sales/AeroWave",
   },
 ];
 
 export const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { ToggleCursorHover } = useContext(CursorContext);
 
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -90,14 +101,32 @@ export const Slider = () => {
               </Info>
 
               <Item>
-                <motion.div
+                <ItemContainer
                   initial="hidden"
                   animate={activeIndex === index ? "visible" : "hidden"}
                   variants={fadeUp}
                   custom={0.7}
                 >
                   <ItemImage src={slide.image} alt={slide.alt} />
-                </motion.div>
+                  <ButtonArea>
+                    <Button
+                      onMouseOver={ToggleCursorHover}
+                      onMouseOut={ToggleCursorHover}
+                      href={slide.deployLink}
+                      target="_blank"
+                    >
+                      Deploy
+                    </Button>
+                    <Button
+                      onMouseOver={ToggleCursorHover}
+                      onMouseOut={ToggleCursorHover}
+                      href={slide.repositoryLink}
+                      target="_blank"
+                    >
+                      Repositório
+                    </Button>
+                  </ButtonArea>
+                </ItemContainer>
               </Item>
             </SliderContainer>
           </SwiperSlide>

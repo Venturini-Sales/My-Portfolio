@@ -80,7 +80,7 @@ const circle = {
   borderRadius: "50%",
   position: "absolute",
   zIndex: 9999,
-  display: "flex",
+  display: "none",
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: "transparent",
@@ -90,6 +90,7 @@ const circle = {
 };
 
 const dot = {
+  display: "none",
   width: 5,
   height: 5,
   borderRadius: "50%",

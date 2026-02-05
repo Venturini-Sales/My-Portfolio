@@ -60,7 +60,7 @@ export const BentoGrid = () => {
         setActiveCard(null);
       }
     },
-    [activeCard]
+    [activeCard],
   );
 
   useEffect(() => {
@@ -253,7 +253,9 @@ export const BentoGrid = () => {
           transition={{ type: "tween", duration: 0.2, ease: "easeInOut" }}
         >
           <FileButton>
-            <BentoTitle>Baixar CV</BentoTitle>
+            <BentoTitle style={{ fontSize: "clamp(15px, 2.5vw, 70px)" }}>
+              Baixar CV
+            </BentoTitle>
             <FontAwesomeIcon icon={faDownload} size="2x" />
           </FileButton>
         </BentoCardCv>

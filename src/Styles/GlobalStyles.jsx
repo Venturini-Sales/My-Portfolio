@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
         user-select: none;
         font-family: 'Roboto',Arial, Helvetica, sans-serif;
         font-weight: 400;
-        cursor: none;
+        cursor: pointer;
     }
 
     html {

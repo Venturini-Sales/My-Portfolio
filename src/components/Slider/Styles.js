@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const SliderWrapper = styled.div`
   width: 100%;
@@ -59,7 +60,37 @@ export const Item = styled.div`
   margin: auto;
 `;
 
+export const ItemContainer = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+`;
+
 export const ItemImage = styled.img`
   display: block;
   width: 450px;
+`;
+
+export const ButtonArea = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+export const Button = styled.a`
+  padding: 12px;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: ${({ theme }) => theme.colors.primary};
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 `;

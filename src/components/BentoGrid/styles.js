@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+export const BentoTitle = styled.h1``;
+
 export const BentoContainer = styled.main`
   display: grid;
   height: calc(100vh - 80px);
@@ -14,13 +16,13 @@ export const BentoContainer = styled.main`
     grid-area: 1 / 1 / 3 / 5;
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.tertiary};
-    font-size: 70px;
+    font-size: clamp(20px, 5vw, 100px);
   }
   .card2 {
     grid-area: 3 / 1 / 5 / 5;
     background-color: ${({ theme }) => theme.colors.tertiary};
     color: ${({ theme }) => theme.colors.primary};
-    font-size: 55px;
+    font-size: clamp(16px, 4vw, 70px);
     gap: 30px;
   }
   .card3 {
@@ -28,7 +30,7 @@ export const BentoContainer = styled.main`
     background-color: ${({ theme }) => theme.colors.tertiary};
     color: ${({ theme }) => theme.colors.primary};
     flex-direction: column;
-    font-size: 35px;
+    font-size: clamp(10px, 2vw, 70px);
     gap: 1px;
   }
   .card4 {
@@ -40,7 +42,7 @@ export const BentoContainer = styled.main`
     grid-area: 5 / 2 / 7 / 5;
     background-color: ${({ theme }) => theme.colors.tertiary};
     color: ${({ theme }) => theme.colors.primary};
-    font-size: 65px;
+    font-size: clamp(15px, 4vw, 70px);
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -50,9 +52,55 @@ export const BentoContainer = styled.main`
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.tertiary};
   }
-`;
 
-export const BentoTitle = styled.h1``;
+  ${({ theme }) => theme.media.lg} {
+    height: calc(100vh - 20px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin: 20px;
+    gap: 20px;
+
+    .card1 {
+      grid-area: 1 / 1 / 2 / 4;
+    }
+
+    .card2 {
+      grid-area: 2 / 1 / 3 / 4;
+    }
+
+    .card3 {
+      grid-area: 4 / 3 / 5 / 4;
+    }
+
+    .card3 ${BentoTitle} {
+      display: none;
+    }
+
+    .card4 {
+      grid-area: 4 / 1 / 5 / 2;
+      font-size: clamp(10px, 2vw, 70px);
+    }
+
+    .card5 {
+      grid-area: 4 / 2 / 5 / 3;
+    }
+
+    .card5 ${BentoTitle} {
+      display: none;
+    }
+
+    .card6 {
+      grid-area: 3 / 1 / 4 / 4;
+    }
+  }
+
+  ${({ theme }) => theme.media.lg} {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin: 10px;
+    gap: 10px;
+  }
+`;
 
 export const BentoCard = styled(motion.div)`
   border-radius: 10px;
@@ -69,6 +117,13 @@ export const BentoCard = styled(motion.div)`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     background-color: ${({ theme }) => theme.colors.secondary};
     border: 2px solid ${({ theme }) => theme.colors.tertiary};
+  }
+
+  ${({ theme }) => theme.media.lg} {
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
   }
 `;
 
