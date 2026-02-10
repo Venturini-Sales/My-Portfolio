@@ -65,6 +65,14 @@ export const SkillsSection = () => {
     },
   };
 
+  const pluralMap = {
+    Todos: "Todos",
+    Framework: "Frameworks",
+    Linguagem: "Linguagens",
+    Ferramenta: "Ferramentas",
+    Biblioteca: "Bibliotecas",
+  };
+
   const HardSkills = [
     {
       keyname: "html",
@@ -96,7 +104,6 @@ export const SkillsSection = () => {
       icon: <SiSass size={25} color="#cf6b9c" />,
       category: "Linguagem",
     },
-
     {
       keyname: "react",
       title: "ReactJS",
@@ -109,7 +116,6 @@ export const SkillsSection = () => {
       icon: <SiTailwindcss size={25} color="#3ebff8" />,
       category: "Framework",
     },
-
     {
       keyname: "styledcomponents",
       title: "Styled Components",
@@ -134,7 +140,6 @@ export const SkillsSection = () => {
       icon: <TbBrandFramerMotion size={25} color="#ffeb0e" />,
       category: "Biblioteca",
     },
-
     {
       keyname: "vscode",
       title: "VsCode",
@@ -181,9 +186,7 @@ export const SkillsSection = () => {
                 onMouseOver={ToggleCursorHover}
                 onMouseOut={ToggleCursorHover}
               >
-                {cat === "Framework"
-                  ? "Frameworks"
-                  : `${cat}s`.replace("Todoss", "Todos")}
+                {pluralMap[cat]}
               </li>
             ))}
           </HardSkillsSelector>
@@ -218,7 +221,6 @@ export const SkillsSection = () => {
             <HardSkillsTitle>
               {selectedData?.title || selectedData?.classNames}
             </HardSkillsTitle>
-
             <HardSkillsText>{selectedData?.description}</HardSkillsText>
           </HardSkillsDescription>
         </AnimatePresence>

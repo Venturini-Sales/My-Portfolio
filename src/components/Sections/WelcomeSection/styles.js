@@ -15,11 +15,20 @@ export const TextArea = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 50%;
+
+  ${({ theme }) => theme.media.md} {
+    width: 80%;
+  }
+
+  ${({ theme }) => theme.media.sm} {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 4.5rem;
+
+  font-size: clamp(35px, 4vw, 70px);
   line-height: 1;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -27,17 +36,21 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 2rem;
+  font-size: clamp(16px, 2vw, 70px);
   margin-bottom: 30px;
   text-align: center;
 `;
 
 export const IconArea = styled.div`
   width: 50%;
+
+  ${({ theme }) => theme.media.md} {
+    display: none;
+  }
 `;
 
 export const DevImage = styled.img`
-  width: 600px;
+  width: 45vw;
 `;
 
 export const ButtonsArea = styled.div`
@@ -47,6 +60,7 @@ export const ButtonsArea = styled.div`
 `;
 
 export const Button = styled.a`
+  font-size: clamp(12px, 1.5vw, 20px);
   padding: 2% 1.5%;
   border-radius: 100%;
   transition: 0.3s ease;

@@ -9,6 +9,10 @@ export const AboutMeSectionContainer = styled.section`
   width: 100%;
   height: 100%;
   color: ${({ theme }) => theme.colors.tertiary};
+
+  ${({ theme }) => theme.media.md} {
+    gap: 60px;
+  }
 `;
 
 export const IconBar = styled.div`
@@ -18,6 +22,14 @@ export const IconBar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.media.md} {
+    height: 90px;
+  }
+
+  ${({ theme }) => theme.media.sm} {
+    display: none;
+  }
 `;
 
 export const IconArea = styled.div`
@@ -26,6 +38,11 @@ export const IconArea = styled.div`
   width: 250px;
   height: 250px;
   overflow: hidden;
+
+  ${({ theme }) => theme.media.md} {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 export const Icon = styled.img`
@@ -39,16 +56,21 @@ export const AboutMeArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
+
+  ${({ theme }) => theme.media.md} {
+    gap: 20px;
+  }
 `;
 
 export const AboutMeTitle = styled.h2`
   text-transform: uppercase;
-  font-size: 3.5rem;
+  font-size: clamp(35px, 4vw, 90px);
   line-height: 1;
 `;
 
 export const AboutMeText = styled.p`
-  width: 800px;
+  width: 60vw;
+  font-size: clamp(13px, 1.2vw, 70px);
   text-align: center;
 `;

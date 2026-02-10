@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const SkillsSectionContainer = styled.section`
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -50,6 +53,11 @@ export const HardSkillsSelector = styled.ul`
     color: ${({ theme }) => theme.colors.primary};
     border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
   }
+
+  ${({ theme }) => theme.media.md} {
+    flex-wrap: wrap;
+    width: 85vw;
+  }
 `;
 
 export const HardSkillsButtonsArea = styled.div``;
@@ -96,14 +104,20 @@ export const HardSkillsDescription = styled.div`
   width: 65%;
   background-color: #353535;
   border-radius: 15px;
+  margin-bottom: 20px;
+  ${({ theme }) => theme.media.md} {
+    padding: 50px 20px;
+    width: 80%;
+  }
 `;
 
 export const HardSkillsTitle = styled.h1`
   text-transform: uppercase;
   font-weight: 800;
+  text-align: center;
 `;
 
 export const HardSkillsText = styled.p`
   text-align: center;
-  font-size: 20px;
+  font-size: clamp(15px, 1.5vw, 70px);
 `;

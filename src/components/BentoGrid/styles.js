@@ -169,6 +169,7 @@ export const ExpandedOverlay = styled(motion.div)`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  overflow-y: auto;
   flex-direction: column;
 `;
 

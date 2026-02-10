@@ -2,7 +2,12 @@ import { motion } from "motion/react";
 import styled from "styled-components";
 
 export const LettersParallaxArea = styled.div`
-  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+
+  pointer-events: none;
+  overflow: hidden;
   z-index: -1;
 `;
 
@@ -22,7 +27,9 @@ export const Scroller = styled(motion.div)`
   display: flex;
   white-space: nowrap;
   display: flex;
+  width: max-content;
   flex-wrap: nowrap;
+  will-change: transform;
 
   span {
     font-weight: 900;

@@ -30,7 +30,7 @@ export default function ParallaxText() {
       [0, 5],
       {
         clamp: false,
-      }
+      },
     );
 
     const x = useTransform(baseX, (v) => `${wrapValue(-25, 25, v)}%`);
@@ -64,7 +64,7 @@ export default function ParallaxText() {
 
   return (
     <LettersParallaxArea>
-      {[...Array(20)].map((_, i) => (
+      {[...Array(200)].map((_, i) => (
         <ParallaxText key={i} baseVelocity={i % 2 === 0 ? -2 : 2}>
           {ParallaxData[i % ParallaxData.length]}
         </ParallaxText>
