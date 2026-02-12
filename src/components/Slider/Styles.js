@@ -27,6 +27,13 @@ export const SliderContainer = styled.div`
   grid-template-rows: 100%;
   column-gap: 30px;
   height: 100%;
+
+  ${({ theme }) => theme.media.lg} {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Info = styled.div`
@@ -36,19 +43,30 @@ export const Info = styled.div`
   justify-content: center;
   padding-left: 120px;
   text-align: center;
+
+  ${({ theme }) => theme.media.lg} {
+    margin-top: 30px;
+    padding-left: 0;
+    width: 70vw;
+  }
 `;
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: clamp(1.94rem, 3vw, 6.88rem);
+  font-size: clamp(30px, 3vw, 150px);
   text-transform: uppercase;
   width: max-content;
   margin-bottom: 32px;
+
+  ${({ theme }) => theme.media.lg} {
+    width: 70vw;
+    margin-bottom: 10px;
+  }
 `;
 
 export const Description = styled.p`
   color: ${({ theme }) => theme.colors.tertiary};
-  font-size: clamp(0.84rem, 1.3vw, 2.97rem);
+  font-size: clamp(10px, 1.3vw, 80px);
   color: white;
 `;
 
@@ -58,6 +76,10 @@ export const Item = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+
+  ${({ theme }) => theme.media.lg} {
+    margin: 30px 30px;
+  }
 `;
 
 export const ItemContainer = styled(motion.div)`
@@ -69,7 +91,11 @@ export const ItemContainer = styled(motion.div)`
 
 export const ItemImage = styled.img`
   display: block;
-  width: 450px;
+  width: 30vw;
+
+  ${({ theme }) => theme.media.sm} {
+    display: none;
+  }
 `;
 
 export const ButtonArea = styled.div`

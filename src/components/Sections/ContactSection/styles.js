@@ -9,14 +9,15 @@ export const ContactSectionContainer = styled.section`
 
 export const ContactTitle = styled.h1`
   text-transform: uppercase;
-  font-size: 3.5rem;
+  text-align: center;
+  font-size: clamp(30px, 4vw, 150px);
   line-height: 1;
   color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const ContactSubtitle = styled.h2`
   text-align: center;
-  font-size: 1.5rem;
+  font-size: clamp(14px, 1.8vw, 70px);
   width: 70%;
   color: ${({ theme }) => theme.colors.tertiary};
 `;
@@ -26,13 +27,21 @@ export const ContactForm = styled.form`
   flex-direction: column;
   gap: 15px;
   margin-top: 30px;
-  width: 600px;
+  width: 45vw;
+
+  ${({ theme }) => theme.media.lg} {
+    width: 80vw;
+  }
 `;
 
 export const InputGroup = styled.div`
   display: flex;
   gap: 10px;
   width: 100%;
+
+  ${({ theme }) => theme.media.lg} {
+    flex-direction: column;
+  }
 `;
 
 export const Input = styled.input`

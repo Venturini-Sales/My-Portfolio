@@ -180,7 +180,7 @@ export const CloseButton = styled.button`
   background: transparent;
   border: none;
   color: ${({ theme }) => theme.colors.tertiary};
-  font-size: 40px;
+  font-size: clamp(30px, 4vw, 90px);
   z-index: 800;
   cursor: none;
   transition: 0.3s ease;

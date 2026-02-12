@@ -91,7 +91,7 @@ export const ContactSection = () => {
               type="email"
               name="email"
               value={email}
-              autoComplete="on"
+              autoComplete="off"
               onChange={(e) => setEmail(e.target.value)}
               onMouseOver={ToggleCursorHover}
               onMouseOut={ToggleCursorHover}

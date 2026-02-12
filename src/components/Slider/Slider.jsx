@@ -26,7 +26,7 @@ const slidesData = [
   {
     title: "Exclusive",
     description:
-      "Exclusive se trata de um e-commerce completo desenvolvido em React com o objetivo de simular uma loja virtual moderna de forma realista. O projeto consome a API do DummyJson, exibindo produtos separados por categorias, além de simular promoções, também contando com um sistema de cadastro e login, armazenando nome de usuário, produtos na lista de desejo, carrinho de compras no LocalStorage e possuindo um sistema de compra integrado com o Paypal, permitindo pagamentos por cartão. A arquitetura do projeto foi bem organizada através da componentização, bibliotecas e padrões de design, utilizando ferramentas como o Styled Components, Custom Hooks e Material UI, sendo um exercício que aprimorou minhas habilidades de organização de código, design e lógica.",
+      "Exclusive se trata de um e-commerce completo desenvolvido em React com o objetivo de simular uma loja virtual moderna de forma realista. O projeto consome a API do DummyJson, exibindo produtos separados por categorias, além de simular promoções, também contando com um sistema de cadastro e login, armazenando nome de usuário, produtos na lista de desejo, carrinho de compras no LocalStorage e possuindo um sistema de compra integrado com o PayPal, permitindo pagamentos por cartão. A arquitetura do projeto foi bem organizada através da componentização, bibliotecas e padrões de design, utilizando ferramentas como o Styled Components, Custom Hooks e Material UI, sendo um exercício que aprimorou minhas habilidades de organização de código, design e lógica.",
     image: ExclusiveImage,
     alt: "Imagem da Página",
     deployLink: "https://exclusive-zeta-five.vercel.app/",

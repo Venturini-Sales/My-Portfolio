@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-tap-highlight-color: transparent;
         font-family: 'Roboto',Arial, Helvetica, sans-serif;
         font-weight: 400;
-        cursor: pointer;
+        cursor: none;
     }
 
     html {

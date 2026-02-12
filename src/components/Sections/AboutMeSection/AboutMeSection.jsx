@@ -22,16 +22,15 @@ export const AboutMeSection = () => {
       <AboutMeArea>
         <AboutMeTitle> Sobre Mim</AboutMeTitle>
         <AboutMeText>
-          Sou um entusiasta de desenvolvimento web apaixonado por transformar
-          ideias em soluções digitais eficientes e impactantes. Estou
-          constantemente em busca de novos desafios para ampliar meus
-          conhecimentos e habilidades, focando no aprendizado contínuo e
-          aplicando as melhores práticas para criar experiências de usuário
-          excepcionais. Valorizo o trabalho em equipe e acredito que a
-          comunicação clara é crucial para o sucesso do projeto. Pronto para
-          contribuir significativamente em ambientes dinâmicos de
-          desenvolvimento web, me esforço para superar expectativas e entregar
-          resultados de alta qualidade.
+          Sempre fui apaixonado por tecnologia, mas foi aos 19 anos que descobri
+          o mundo da programação e decidi construir uma carreira nessa área.
+          Desde então, tenho me dedicado ao desenvolvimento profissional,
+          estudando e implementando na prática os conhecimentos que venho
+          adquirindo. No momento estou cursando Análise e Desenvolvimento de
+          Sistemas e procurando uma oportunidade para colocar em prática e
+          aprimorar minhas habilidades. Minha principal tecnologia é o React,
+          com aproximadamente dois anos de experiência em diversos projetos,
+          incluindo trabalhos como freelancer.
         </AboutMeText>
       </AboutMeArea>
     </AboutMeSectionContainer>

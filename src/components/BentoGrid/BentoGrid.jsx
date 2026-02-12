@@ -36,6 +36,18 @@ import { ContactSection } from "../Sections/ContactSection/ContactSection";
 import { SkillsSection } from "../Sections/SkillsSection/SkillsSection";
 import Curriculo from "/pdf/curriculo.pdf";
 
+const getCircleRadius = (x, y) => {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+
+  return Math.max(
+    Math.hypot(x, y),
+    Math.hypot(vw - x, y),
+    Math.hypot(x, vh - y),
+    Math.hypot(vw - x, vh - y),
+  );
+};
+
 export const BentoGrid = () => {
   const [isProjectHovered, setIsProjectHovered] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
@@ -75,26 +87,32 @@ export const BentoGrid = () => {
     return () => window.removeEventListener("keydown", CloseSection);
   }, [CloseSection]);
 
-  const expandVariants = (x, y) => ({
-    initial: {
-      clipPath: `circle(10px at ${x} ${y})`,
-      opacity: 1,
-    },
-    expand: {
-      clipPath: `circle(2000px at ${x} ${y})`,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 30,
-        damping: 20,
+  const expandVariants = (x, y) => {
+    const px = parseFloat(x);
+    const py = parseFloat(y);
+    const radius = getCircleRadius(px, py);
+
+    return {
+      initial: {
+        clipPath: `circle(10px at ${x} ${y})`,
+        opacity: 1,
       },
-    },
-    exit: {
-      clipPath: `circle(10px at ${x} ${y})`,
-      opacity: 1,
-      transition: { duration: 0.35 },
-    },
-  });
+      expand: {
+        clipPath: `circle(${radius}px at ${x} ${y})`,
+        opacity: 1,
+        transition: {
+          type: "tween",
+          duration: 0.45,
+          ease: "easeOut",
+        },
+      },
+      exit: {
+        clipPath: `circle(10px at ${x} ${y})`,
+        opacity: 1,
+        transition: { duration: 0.35 },
+      },
+    };
+  };
 
   const handleCardClick = (event, cardName) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -276,13 +294,7 @@ export const BentoGrid = () => {
             {activeCard === "contact" && <ContactSection />}
             {activeCard === "skills" && <SkillsSection />}
 
-            <CloseButton
-              onClick={() => {
-                setActiveCard(null);
-              }}
-            >
-              ×
-            </CloseButton>
+            <CloseButton onClick={() => setActiveCard(null)}>×</CloseButton>
           </ExpandedOverlay>
         )}
       </AnimatePresence>

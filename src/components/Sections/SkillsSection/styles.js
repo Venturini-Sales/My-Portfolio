@@ -41,6 +41,7 @@ export const HardSkillsSelector = styled.ul`
     cursor: none;
     transition: border-color 0.2s ease;
     color: #747474ff;
+    font-size: clamp(15px, 1vw, 70px);
   }
 
   li:hover {
@@ -91,6 +92,7 @@ export const HardSkillsButtons = styled.div`
   p {
     font-weight: 800;
     line-height: 1;
+    font-size: clamp(15px, 1vw, 20px);
     white-space: nowrap;
   }
 `;
@@ -113,11 +115,12 @@ export const HardSkillsDescription = styled.div`
 
 export const HardSkillsTitle = styled.h1`
   text-transform: uppercase;
+  font-size: clamp(35px, 2.5vw, 70px);
   font-weight: 800;
   text-align: center;
 `;
 
 export const HardSkillsText = styled.p`
   text-align: center;
-  font-size: clamp(15px, 1.5vw, 70px);
+  font-size: clamp(15px, 1.5vw, 40px);
 `;

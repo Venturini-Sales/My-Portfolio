@@ -25,8 +25,10 @@ export const WelcomeSection = () => {
   return (
     <WelcomeSectionContainer>
       <TextArea>
-        <Title>Bem-Vindo ao Meu Portfolio</Title>
-        <SubTitle>Me chamo João Pedro V. Sales, sou um desenvolvedor Front-end</SubTitle>
+        <Title>Bem-vindo ao Meu Portfolio</Title>
+        <SubTitle>
+          Me chamo João Pedro V. Sales, sou um desenvolvedor Front-end
+        </SubTitle>
         <ButtonsArea>
           <Button
             href="https://github.com/Venturini-Sales"
